@@ -40,7 +40,7 @@ public class MainFrame extends JFrame {
         navPan.setBackground(Color.LIGHT_GRAY);
         add(navPan);
         
-        
+        setVisible(true);
         
         
     }
