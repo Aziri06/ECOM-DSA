@@ -91,9 +91,9 @@ public class RegForm extends JFrame{
         g.setBounds(10, 330, 100, 25);
         add(g);
         
-        String[] gen = {"Male", "Female"};
-        JComboBox<String> gender = new JComboBox(gen);
-        gender.setBounds(110, 250, 170, 25);
+        String[] gen = {"-SELECT-","Male", "Female"};
+        JComboBox gender = new JComboBox(gen);
+        gender.setBounds(110, 330, 170, 25);
         add(gender);
         
         JButton createbtn = new JButton("Create");

@@ -47,26 +47,36 @@ public class LogIn extends JFrame {
         JButton logbtn = new JButton("Log In");
         logbtn.setBounds(300, 200, 100, 30);
         add(logbtn);
-//        logbtn.addActionListener(new ActionListener(){
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                String username = usertxt.getText();
-//                String password = new String(pass.getPassword());
-//                
-//                if(username.isEmpty()){
-//                    JOptionPane.showMessageDialog(LogIn.this, "Enter Username", "Input Error", JOptionPane.ERROR_MESSAGE);
-////                } else if (pass.isEmpty){
-////                    JOptionPane.showMessageDialog(LogIn.this, "Enter Password", "Input Error", JOptionPane.ERROR_MESSAGE);                   
-////                }
-//                MainFrame main = new MainFrame(); 
-//                main.setVisible(true);
-//                dispose();
-//            }
-//        });
+        logbtn.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String username = userName.getText();
+                String password = new String(pass.getPassword());
+                
+                if (username.isEmpty() && password.isEmpty()){
+                    JOptionPane.showMessageDialog(LogIn.this, "Enter Username and Password", "Input Error", JOptionPane.ERROR_MESSAGE);
+                }else if(username.isEmpty()){
+                    JOptionPane.showMessageDialog(LogIn.this, "Enter Username", "Input Error", JOptionPane.ERROR_MESSAGE);
+                } else if (password.isEmpty()){
+                    JOptionPane.showMessageDialog(LogIn.this, "Enter Password", "Input Error", JOptionPane.ERROR_MESSAGE);                   
+                }else {
+                MainFrame main = new MainFrame(); 
+                main.setVisible(true);
+                dispose();
+                }
+            }
+        });
         
         JButton cnclbtn = new JButton("Cancel");
         cnclbtn.setBounds(190, 200, 100, 30);
         add(cnclbtn);
+        cnclbtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                userName.setText("");
+                pass.setText("");
+            }
+        });
         
         JButton regbtn = new JButton("Register Here");
         regbtn.setBounds(190, 240, 210, 30);
