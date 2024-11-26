@@ -2,7 +2,8 @@
 package ECOM;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
+import java.awt.*;
+import java.awt.event.*;
 import java.awt.event.ActionListener;
 
 
@@ -21,15 +22,6 @@ public class RegForm extends JFrame{
         JButton backbtn = new JButton("Back");
         backbtn.setBounds(5, 5, 70, 30);
         add(backbtn);
-        //action for back to log in btn
-        backbtn.addActionListener (new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-            LogIn back = new LogIn();
-            back.setVisible(true);
-            dispose();
-            }
-        });
         
         JLabel f = new JLabel("First Name");
         f.setBounds(110, 60, 90, 30);
@@ -99,14 +91,28 @@ public class RegForm extends JFrame{
         g.setBounds(10, 330, 100, 25);
         add(g);
         
-        JComboBox<String> gender = new JComboBox();
-        gender.addItem("Gender");
-        gender.addItem("Male");
-        gender.addItem("Female");
+        String[] gen = {"Male", "Female"};
+        JComboBox<String> gender = new JComboBox(gen);
         gender.setBounds(110, 250, 170, 25);
         add(gender);
         
+        JButton createbtn = new JButton("Create");
+        createbtn.setBounds(430, 520, 90, 30);
+        add(createbtn);
         
+        JButton cancelbtn = new JButton("Cancel");
+        cancelbtn.setBounds(330, 520, 90, 30);
+        add(cancelbtn);
+        
+         //action for back to log in btn
+        backbtn.addActionListener (new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            LogIn back = new LogIn();
+            back.setVisible(true);
+            dispose();
+            }
+        });
         
                 
         
