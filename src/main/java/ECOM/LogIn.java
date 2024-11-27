@@ -22,9 +22,9 @@ public class LogIn extends JFrame {
         
         
         
-        Font font = new Font("Arial" , Font.BOLD, 25); 
-        JLabel nametxt = new JLabel("E-COMMERCE NAME");
-        nametxt.setBounds(135, 30, 400, 60);
+        Font font = new Font("Arial" , Font.BOLD, 50); 
+        JLabel nametxt = new JLabel("ByteMart");
+        nametxt.setBounds(170, 30, 400, 60);
         add(nametxt);                                                                                                                                                                                                                         
         nametxt.setFont(font);
         
@@ -33,7 +33,7 @@ public class LogIn extends JFrame {
         add(usertxt);
         
         JTextField userName = new JTextField();
-        userName.setBounds(200, 130, 200, 25);
+        userName.setBounds(190, 130, 210, 25);
         add(userName);
           
          JLabel passtxt = new JLabel("Password:");
@@ -41,7 +41,7 @@ public class LogIn extends JFrame {
         add(passtxt);
         
         JPasswordField pass = new JPasswordField();
-        pass.setBounds(200, 165, 200, 25);
+        pass.setBounds(190, 165, 210, 25);
         add(pass);
         
         JButton logbtn = new JButton("Log In");
@@ -60,7 +60,7 @@ public class LogIn extends JFrame {
                 } else if (password.isEmpty()){
                     JOptionPane.showMessageDialog(LogIn.this, "Enter Password", "Input Error", JOptionPane.ERROR_MESSAGE);                   
                 }else {
-                MainFrame main = new MainFrame(); 
+                MainPage main = new MainPage(); 
                 main.setVisible(true);
                 dispose();
                 }

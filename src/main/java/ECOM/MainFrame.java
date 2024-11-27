@@ -9,10 +9,11 @@ public class MainFrame extends JFrame {
     
     private JLabel titletxt;
     private JPanel navPan;
-    private JButton homebtn, searchbtn, cartbtn;
+    private JButton homebtn, searchbtn, cartbtn, logoutbtn;
     private JComboBox othrscb;
     private JTextField searchbox;
     
+//    page used for testing
     
     MainFrame() {
                
@@ -30,10 +31,17 @@ public class MainFrame extends JFrame {
         searchbtn.setBorderPainted(false);
         add(searchbtn);
         
+//        page used for testing
+        
+        ImageIcon out = new ImageIcon("file:/C:/Users/My%20PC/Documents/NetBeansProjects/DSA/src/main/java/ECOM/img/out.png");
+        
+        JButton logoutbtn = new JButton(out);
+        logoutbtn.setBounds(570, 30, 80, 30);
+        add(logoutbtn);
+        
         JTextField searchbox = new JTextField ();
         searchbox.setBounds(300, 30, 150, 30);
         add(searchbox);
-        
         
         JPanel navPan = new JPanel();
         navPan.setBounds(0, 0, 700, 80);
@@ -49,3 +57,5 @@ public class MainFrame extends JFrame {
         new MainFrame();
     }
 }
+
+//page used for testing
