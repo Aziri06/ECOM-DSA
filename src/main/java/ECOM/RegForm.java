@@ -22,6 +22,14 @@ public class RegForm extends JFrame{
         JButton backbtn = new JButton("Back");
         backbtn.setBounds(5, 5, 70, 30);
         add(backbtn);
+        backbtn.addActionListener (new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            LogIn back = new LogIn();
+            back.setVisible(true);
+            dispose();
+            }
+        });
         
         JLabel f = new JLabel("First Name");
         f.setBounds(110, 60, 90, 30);
@@ -103,14 +111,17 @@ public class RegForm extends JFrame{
         JButton cancelbtn = new JButton("Cancel");
         cancelbtn.setBounds(330, 520, 90, 30);
         add(cancelbtn);
-        
-         //action for back to log in btn
-        backbtn.addActionListener (new ActionListener() {
+        cancelbtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-            LogIn back = new LogIn();
-            back.setVisible(true);
-            dispose();
+                ftxt.setText("");
+                mitxt.setText("");
+                stxt.setText("");
+                emtxt.setText("");
+                pstxt.setText("");
+                bdtxt.setText("");
+                addtxt.setText("");
+                numtxt.setText("");
             }
         });
         
